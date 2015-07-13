@@ -10,7 +10,7 @@ class Dog(Animal):
 
            kind = 'k9'
 
-           def speaking(self):
+           def speak(self):
                       print '%s says whoof!' % self.name
 class Cat(Animal):
            """A feline animal"""
