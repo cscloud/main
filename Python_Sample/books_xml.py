@@ -31,3 +31,13 @@ print 'description: %s' % book.find('description').text
 print 'Titles'
 for elem in catalog.findall('book/title'):
     print '\t%s' % elem.text
+
+# print author and price of computer books
+print 'computer books'
+for book in catalog:
+    if book.find('genre').text !='Computer':
+        continue
+    print u'\t%s: \N{pound sign}%s' % (
+        book.find('author').text,
+        book.find('price').text,
+        )
