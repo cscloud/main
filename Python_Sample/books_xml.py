@@ -41,3 +41,9 @@ for book in catalog:
         book.find('author').text,
         book.find('price').text,
         )
+
+# Print all Metadata
+print 'bk102:'
+book = catalog.find('book[@id="bk102"]')
+for elem in book:
+    print '%s: %s' % (elem.tag.title(), elem.text)
